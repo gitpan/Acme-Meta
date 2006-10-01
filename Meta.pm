@@ -7,12 +7,12 @@ require Exporter;
 use vars qw($VERSION);
 
 BEGIN {
-  $Meta::{'Meta::'} = $main::{'Meta::'};
-  $Acme::Meta::{'Meta::'} = $main::{'Meta::'};
+  *Meta::Meta:: = *main::Meta::;
+  *Acme::Meta::Meta:: = *main::Meta::;
   $^W = 1;
 }
 
-$VERSION = '0.01';
+$VERSION = '0.02';
 
 1;
 __END__
@@ -35,11 +35,11 @@ The Meta:: meta-package
 
 =head1 AUTHOR
 
-Nicholas Clark, E<lt>nick@talking.bollo.cxE<gt>
+Nicholas Clark, E<lt>nick@ccl4.orgE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2003 by Nicholas Clark
+Copyright 2003, 2006 by Nicholas Clark
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself.
